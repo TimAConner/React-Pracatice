@@ -6,6 +6,6 @@ export default class ResetButton extends Component {
       <div className=''>
         <button  onClick={this.props.reset}>Reset</button>
       </div>
-    )
+    );
   }
 }

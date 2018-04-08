@@ -1,4 +1,3 @@
-'use strict';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -16,6 +15,7 @@ class App extends React.Component {
         ' ', ' ', ' ',
         ' ', ' ', ' ',
       ],
+      turn: 'x',
     }
   }
 
@@ -31,14 +31,16 @@ class App extends React.Component {
           <Announcement />
           <ResetButton />
         </div>
-        {this.state.gameBoard.map((value, i) => {
-          <Tile
-            key={i}
-            loc={i}
-            value={value}
-            updateBoard={this.updateBoard.bind(this)}
-            turn={this.state.turn} />
-        })}
+        {this.state.gameBoard.map(function (value, i) {
+          return (
+            <Tile
+              key={i}
+              loc={i}
+              value={value}
+              updateBoard={this.updateBoard.bind(this)}
+              turn={this.state.turn} />
+          );
+        }.bind(this))}
       </div>
     );
   }
