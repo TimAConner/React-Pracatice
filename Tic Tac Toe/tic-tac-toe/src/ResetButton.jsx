@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 export default class ResetButton extends Component {
-  renter () {
+  render () {
     return (
       <div className=''>
-        <button  onClick={this.props.reset}>Reset</button>
+        <button  onClick={this.props.resetBoard}>Reset</button>
       </div>
     );
   }
