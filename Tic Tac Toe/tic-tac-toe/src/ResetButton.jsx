@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Tile extends Component {
+export default class ResetButton extends Component {
   renter () {
     return (
       <div className=''>
