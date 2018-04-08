@@ -67,6 +67,16 @@ class App extends React.Component {
       this.setState({ winner: 'd' });
     }
 
+    if(this.props.winner === 'd'){
+      return 'Draw';
+    }
+    if(this.props.winner === 'x'){
+      return 'X';
+    }
+    if(this.props.winner === 'o'){
+      return 'o';
+    }
+    
     /* 
       Switch players turn
     */
