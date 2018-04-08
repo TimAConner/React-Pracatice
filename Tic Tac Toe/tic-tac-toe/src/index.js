@@ -4,6 +4,7 @@ import './index.css';
 import Announcement from './Announcement';
 import ResetButton from './ResetButton';
 import Tile from './Tile';
+import './GameBoard.css'
 
 
 class App extends React.Component {
@@ -21,7 +22,7 @@ class App extends React.Component {
   }
 
   updateBoard(loc, player) {
-    
+
     // Invalid move
     if (this.state.gameBoard[loc] === 'x' || this.state.gameBoard[loc] === 'o') {
       return;
@@ -61,7 +62,7 @@ class App extends React.Component {
     }
 
     // If only x and o , and previous matches didn't return, then it's a draw.
-    const drawMatch = /(x|o)+/;
+    const drawMatch = /(x|o){9}/;
     if (gameBoardString.match(drawMatch)) {
       this.setState({ winner: 'd' });
     }
@@ -69,7 +70,7 @@ class App extends React.Component {
     /* 
       Switch players turn
     */
-    this.setState({turn: (this.state.turn === 'x') ? 'o' : 'x'});
+    this.setState({ turn: (this.state.turn === 'x') ? 'o' : 'x' });
   }
 
   resetBoard() {
@@ -94,16 +95,18 @@ class App extends React.Component {
           <Announcement winner={this.state.winner} />
           <ResetButton resetBoard={this.resetBoard.bind(this)} />
         </div>
-        {this.state.gameBoard.map(function (value, i) {
-          return (
-            <Tile
-              key={i}
-              loc={i}
-              value={value}
-              updateBoard={this.updateBoard.bind(this)}
-              turn={this.state.turn} />
-          );
-        }.bind(this))}
+        <div className="game-board">
+          {this.state.gameBoard.map(function (value, i) {
+            return (
+              <Tile
+                key={i}
+                loc={i}
+                value={value}
+                updateBoard={this.updateBoard.bind(this)}
+                turn={this.state.turn} />
+            );
+          }.bind(this))}
+        </div>
       </div>
     );
   }
