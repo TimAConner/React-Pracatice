@@ -6,6 +6,30 @@ Solo practice in React done on personal time while attending the [Nashville Soft
 ### Tic Tac Toe
 A tic tac toe game built following [the introduction React tutorial](https://reactjs.org/tutorial/tutorial.html) and [a Breaktech tutorial](https://www.youtube.com/watch?v=MQonrbY8Ezg&t) to learn from two different perspectives on the same project.
 
+# To Use
+1. Fork this repo.
+1. Clone it down.
+1. `cd Tic Tact Toe/tic-tac-toe`
+1. run `npm start`
+
 
 ### Note Taking Tutorial
 A note taking app made with Firebase while following a [Wes Doyle Tutorial](https://www.youtube.com/watch?v=-RtJroTMDf4).
+#### To Use
+1. Fork this repo.
+1. Clone it down.
+1. `cd note-taking-tutorial/note-taking/`
+1. run `npm install`
+1. Add firebase credentials to src/Config/Config.js
+     ```
+          'use strict';
+     export const DB_CONFIG = {
+         apiKey: "AIzaSyB5hYFobzaM90-977uxjfnrJX2zf9_BH5Y",
+         authDomain: "practice-project-d42d4.firebaseapp.com",
+         databaseURL: "https://practice-project-d42d4.firebaseio.com",
+         projectId: "practice-project-d42d4",
+         storageBucket: "practice-project-d42d4.appspot.com",
+         messagingSenderId: "294036155870"
+      };
+     ```
+1. run `npm start`
