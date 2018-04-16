@@ -9,7 +9,7 @@ A tic tac toe game built following [the introduction React tutorial](https://rea
 # To Use
 1. Fork this repo.
 1. Clone it down.
-1. `cd Tic Tact Toe/tic-tac-toe`
+1. `cd Tic Tac Toe/tic-tac-toe`
 1. run `npm start`
 
 
@@ -24,12 +24,12 @@ A note taking app made with Firebase while following a [Wes Doyle Tutorial](http
      ```
           'use strict';
      export const DB_CONFIG = {
-         apiKey: "AIzaSyB5hYFobzaM90-977uxjfnrJX2zf9_BH5Y",
-         authDomain: "practice-project-d42d4.firebaseapp.com",
-         databaseURL: "https://practice-project-d42d4.firebaseio.com",
-         projectId: "practice-project-d42d4",
-         storageBucket: "practice-project-d42d4.appspot.com",
-         messagingSenderId: "294036155870"
+         apiKey: "",
+         authDomain: "",
+         databaseURL: "",
+         projectId: "",
+         storageBucket: "",
+         messagingSenderId: ""
       };
      ```
 1. run `npm start`
